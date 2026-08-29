@@ -1,0 +1,40 @@
+{
+  "shows": [
+    {
+      "slug": "2bobs",
+      "name": "2Bobs",
+      "searchTerm": "2Bobs Enns Baker",
+      "feedUrl": "https://feeds.example/2bobs.xml",
+      "hosts": ["David C. Baker", "Blair Enns"],
+      "region": "US",
+      "lenses": ["business-of-expertise"],
+      "active": true,
+      "maxEpisodesPerRun": 3,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "rare-mind",
+      "name": "The Rare Mind",
+      "searchTerm": "The Rare Mind Alex Smith",
+      "feedUrl": "https://feeds.example/rare-mind.xml",
+      "hosts": ["Alex M H Smith"],
+      "region": "UK",
+      "lenses": ["strategy"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "marketing-week",
+      "name": "The Marketing Week Podcast",
+      "searchTerm": "Marketing Week Podcast",
+      "feedUrl": null,
+      "hosts": [],
+      "region": "UK",
+      "lenses": [],
+      "active": false,
+      "maxEpisodesPerRun": 1,
+      "speakersExpected": null
+    }
+  ]
+}

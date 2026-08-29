@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "segments": [
+    { "speaker": "Alex M H Smith", "startTime": 0.0,   "endTime": 6.4,   "body": "My guest today is April Dunford, and we are going to talk about positioning." },
+    { "speaker": "Alex M H Smith", "startTime": 6.4,   "endTime": 13.2,  "body": "Which is a word that has been worn almost smooth by overuse." },
+    { "speaker": "April Dunford",  "startTime": 13.6,  "endTime": 22.1,  "body": "It has, and I think that is because most people treat it as a messaging exercise." },
+    { "speaker": "April Dunford",  "startTime": 22.4,  "endTime": 31.9,  "body": "Positioning is not what you say. It is the context you set before you say anything at all." },
+    { "speaker": "Alex M H Smith", "startTime": 32.2,  "endTime": 40.0,  "body": "So the failure mode is a company that has a good story and the wrong frame." },
+    { "speaker": "April Dunford",  "startTime": 40.3,  "endTime": 51.8,  "body": "Exactly that. And you cannot fix a frame problem with better copy, although everybody tries." }
+  ]
+}

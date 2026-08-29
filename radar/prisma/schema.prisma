@@ -1,0 +1,122 @@
+// Radar data model. See the build brief §4.
+//
+// `status` and `role`/`confidence` are plain strings; the permitted sets are
+// enforced in code (src/lib/status.ts) rather than by SQLite enums, so that a
+// value added later does not require a migration to read old rows.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Show {
+  id       String  @id @default(cuid())
+  slug     String  @unique
+  name     String
+  feedUrl  String?
+  hosts    String // JSON array
+  region   String // UK | EU | US | OTHER
+  lenses   String // JSON array
+  active   Boolean @default(true)
+
+  // Per-run discovery cap, newest episodes first.
+  maxEpisodesPerRun Int @default(2)
+
+  // Diarisation hint passed to the transcriber. Per-show configuration, not a
+  // formula: interview shows are hosts + 1, no-guest panel shows are hosts.
+  // Null omits the hint entirely.
+  speakersExpected Int?
+
+  episodes Episode[]
+}
+
+model Episode {
+  id          String   @id @default(cuid())
+  showId      String
+  show        Show     @relation(fields: [showId], references: [id])
+  guid        String
+  title       String
+  description String?
+  publishedAt DateTime
+  durationSec Int?
+  audioUrl    String
+  pageUrl     String?
+
+  providedTranscriptUrl  String?
+  providedTranscriptType String? // mime type from the feed
+
+  // Set when an import has already been attempted and refused (e.g. the
+  // provided transcript carries no speaker information). Retries read this and
+  // do not re-attempt a known-bad import; they fall through to fetch.
+  providedTranscriptRefusedReason String?
+
+  status        String // discovered | fetched | transcribed | named | exported | failed | skipped
+  source        String? // assemblyai | provided
+  audioPath     String?
+  transcriptId  String? // vendor transcript id
+  errorMessage  String?
+  estCostUsd    Float?
+
+  // Per-episode override of Show.speakersExpected. Reserved; no CLI surface yet.
+  speakersExpected Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  utterances Utterance[]
+  speakerMap SpeakerMap[]
+
+  @@unique([showId, guid])
+  @@index([status])
+}
+
+model Utterance {
+  id           String  @id @default(cuid())
+  episodeId    String
+  episode      Episode @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  idx          Int
+  speakerLabel String // A, B, C ... or a provided label
+  startMs      Int
+  endMs        Int
+  text         String
+  confidence   Float?
+
+  @@unique([episodeId, idx])
+}
+
+model SpeakerMap {
+  id          String  @id @default(cuid())
+  episodeId   String
+  episode     Episode @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  label       String
+  name        String
+  role        String // host | guest | unknown
+  confidence  String // high | medium | low
+  needsReview Boolean @default(false)
+
+  // Set by `radar speakers set`. A manual row is never overwritten by naming.
+  manual Boolean @default(false)
+
+  @@unique([episodeId, label])
+}
+
+model RunLog {
+  id          String    @id @default(cuid())
+  startedAt   DateTime  @default(now())
+  finishedAt  DateTime?
+  command     String
+  dryRun      Boolean
+  discovered  Int       @default(0)
+  transcribed Int       @default(0)
+  imported    Int       @default(0)
+  named       Int       @default(0)
+  exported    Int       @default(0)
+  failed      Int       @default(0)
+  skipped     Int       @default(0)
+  minutesUsed Float     @default(0)
+  estCostUsd  Float     @default(0)
+  notes       String?
+}

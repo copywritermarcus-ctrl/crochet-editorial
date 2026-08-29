@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "segments": [
+    { "startTime": 0.0,  "endTime": 6.4,  "body": "My guest today is April Dunford, and we are going to talk about positioning." },
+    { "startTime": 6.4,  "endTime": 13.2, "body": "Which is a word that has been worn almost smooth by overuse." },
+    { "startTime": 13.6, "endTime": 22.1, "body": "It has, and I think that is because most people treat it as a messaging exercise." }
+  ]
+}

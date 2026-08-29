@@ -1,0 +1,16 @@
+{
+  "speakers": [
+    {
+      "label": "A",
+      "name": "Blair Enns",
+      "role": "host",
+      "confidence": "high"
+    },
+    {
+      "label": "B",
+      "name": "David C. Baker",
+      "role": "host",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "show": {
+    "name": "2Bobs",
+    "hosts": [
+      "David C. Baker",
+      "Blair Enns"
+    ]
+  },
+  "episode": {
+    "title": "Productization (Again)",
+    "description": "Productization is a compression of something you already do well and repeatedly. David and Blair on why most firms package too early, and what that does to pricing."
+  },
+  "utterances": {
+    "head": [
+      {
+        "label": "A",
+        "text": "Welcome back to 2Bobs. I'm Blair Enns, and as always I'm joined by David C. Baker."
+      },
+      {
+        "label": "A",
+        "text": "Today we are returning to productization, which is a subject we have circled more than once."
+      },
+      {
+        "label": "B",
+        "text": "We have, and I think we keep coming back to it because most firms get the sequencing wrong."
+      },
+      {
+        "label": "B",
+        "text": "They productize before they have any real evidence that the market wants the thing they are packaging."
+      },
+      {
+        "label": "A",
+        "text": "So the failure is not packaging as such. The failure is packaging too early."
+      },
+      {
+        "label": "B",
+        "text": "Right. Productization is a compression of something you already do well and repeatedly."
+      },
+      {
+        "label": "B",
+        "text": "If you have not done it repeatedly, there is nothing to compress."
+      },
+      {
+        "label": "A",
+        "text": "Let us talk about pricing, because that is where I see the most damage."
+      },
+      {
+        "label": "A",
+        "text": "The moment you put a fixed price on a productized offering, you have capped your upside."
+      },
+      {
+        "label": "B",
+        "text": "Unless the cost of delivery falls faster than the price does."
+      },
+      {
+        "label": "A",
+        "text": "Which is the whole argument for productizing in the first place."
+      },
+      {
+        "label": "B",
+        "text": "It is. And it is why I would rather see a firm productize the diagnostic than the delivery."
+      }
+    ],
+    "tail": []
+  }
+}

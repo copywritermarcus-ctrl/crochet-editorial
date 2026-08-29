@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <title>The Rare Mind</title>
+    <link>https://raremind.example/</link>
+    <description>Strategy conversations with Alex M H Smith.</description>
+    <language>en-gb</language>
+
+    <!-- Two podcast:transcript tags. Preference order is JSON, then VTT, then
+         SRT, so the JSON one must win regardless of document order. The SRT is
+         listed first here deliberately. -->
+    <item>
+      <title>April Dunford on Positioning</title>
+      <link>https://raremind.example/episodes/april-dunford-positioning</link>
+      <guid isPermaLink="false">rare-mind-ep-041</guid>
+      <pubDate>Wed, 26 Aug 2026 07:30:00 GMT</pubDate>
+      <description>Alex M H Smith talks to April Dunford about why positioning fails in the room rather than on the page.</description>
+      <itunes:duration>00:41:20</itunes:duration>
+      <enclosure url="https://audio.example/rare-mind/april-dunford.mp3" length="39680000" type="audio/mpeg"/>
+      <podcast:transcript url="https://transcripts.example/rare-mind/041.srt" type="application/x-subrip"/>
+      <podcast:transcript url="https://transcripts.example/rare-mind/041.vtt" type="text/vtt"/>
+      <podcast:transcript url="https://transcripts.example/rare-mind/041.json" type="application/json"/>
+    </item>
+
+    <!-- A single VTT transcript, no JSON. VTT must be selected. -->
+    <item>
+      <title>The Cost of Being Reasonable</title>
+      <link>https://raremind.example/episodes/cost-of-being-reasonable</link>
+      <guid isPermaLink="false">rare-mind-ep-040</guid>
+      <pubDate>Wed, 26 Aug 2026 07:00:00 GMT</pubDate>
+      <description>On strategic timidity.</description>
+      <itunes:duration>1980</itunes:duration>
+      <enclosure url="https://audio.example/rare-mind/cost-of-being-reasonable.mp3" length="19000000" type="audio/mpeg"/>
+      <podcast:transcript url="https://transcripts.example/rare-mind/040.vtt" type="text/vtt"/>
+    </item>
+  </channel>
+</rss>

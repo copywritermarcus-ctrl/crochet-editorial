@@ -1,0 +1,173 @@
+{
+  "shows": [
+    {
+      "slug": "2bobs",
+      "name": "2Bobs",
+      "searchTerm": "2Bobs Enns Baker",
+      "feedUrl": null,
+      "hosts": ["David C. Baker", "Blair Enns"],
+      "region": "US",
+      "lenses": ["business-of-expertise"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "ditching-hourly",
+      "name": "Ditching Hourly",
+      "searchTerm": "Ditching Hourly Jonathan Stark",
+      "feedUrl": null,
+      "hosts": ["Jonathan Stark"],
+      "region": "US",
+      "lenses": ["pricing", "business-of-expertise"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 1
+    },
+    {
+      "slug": "undisputed-authority",
+      "name": "Undisputed Authority",
+      "searchTerm": "Undisputed Authority Liam Curley",
+      "feedUrl": null,
+      "hosts": ["Liam Curley"],
+      "region": "UK",
+      "lenses": ["authority", "positioning"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "leveraging-tl",
+      "name": "Leveraging Thought Leadership",
+      "searchTerm": "Leveraging Thought Leadership Winick",
+      "feedUrl": null,
+      "hosts": ["Peter Winick", "Bill Sherman"],
+      "region": "US",
+      "lenses": ["thought-leadership"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "everything-tl",
+      "name": "Everything Thought Leadership",
+      "searchTerm": "Everything Thought Leadership Buday",
+      "feedUrl": null,
+      "hosts": ["Bob Buday"],
+      "region": "US",
+      "lenses": ["thought-leadership"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "unseen-unknown",
+      "name": "Unseen Unknown",
+      "searchTerm": "Unseen Unknown Jasmine Bina",
+      "feedUrl": null,
+      "hosts": ["Jasmine Bina", "Jean-Louis Rawlence"],
+      "region": "US",
+      "lenses": ["brand", "culture"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "b2b-marketing",
+      "name": "B2B Marketing Podcast",
+      "searchTerm": "B2B Marketing Podcast Richard O'Connor",
+      "feedUrl": null,
+      "hosts": ["Richard O'Connor"],
+      "region": "UK",
+      "lenses": ["b2b-marketing"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 3
+    },
+    {
+      "slug": "uncensored-cmo",
+      "name": "Uncensored CMO",
+      "searchTerm": "Uncensored CMO Jon Evans",
+      "feedUrl": null,
+      "hosts": ["Jon Evans"],
+      "region": "UK",
+      "lenses": ["b2b-marketing", "brand"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 3
+    },
+    {
+      "slug": "rare-mind",
+      "name": "The Rare Mind",
+      "searchTerm": "The Rare Mind Alex M H Smith",
+      "feedUrl": null,
+      "hosts": ["Alex M H Smith"],
+      "region": "UK",
+      "lenses": ["strategy", "positioning"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "consulting-growth",
+      "name": "The Consulting Growth Podcast",
+      "searchTerm": "Consulting Growth Podcast Joe O'Mahoney",
+      "feedUrl": null,
+      "hosts": ["Joe O'Mahoney"],
+      "region": "UK",
+      "lenses": ["consulting", "business-of-expertise"],
+      "active": true,
+      "maxEpisodesPerRun": 2,
+      "speakersExpected": 2
+    },
+
+    {
+      "slug": "marketing-week",
+      "name": "The Marketing Week Podcast",
+      "searchTerm": "Marketing Week Podcast",
+      "feedUrl": null,
+      "hosts": [],
+      "region": "UK",
+      "lenses": ["b2b-marketing"],
+      "active": false,
+      "maxEpisodesPerRun": 1,
+      "speakersExpected": 3
+    },
+    {
+      "slug": "marketing-meetup",
+      "name": "The Marketing Meetup Podcast",
+      "searchTerm": "The Marketing Meetup Podcast Joe Glover",
+      "feedUrl": null,
+      "hosts": ["Joe Glover"],
+      "region": "UK",
+      "lenses": ["b2b-marketing"],
+      "active": false,
+      "maxEpisodesPerRun": 1,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "school-of-thought",
+      "name": "School of Thought",
+      "searchTerm": "School of Thought Jove podcast",
+      "feedUrl": null,
+      "hosts": [],
+      "region": "UK",
+      "lenses": ["thought-leadership"],
+      "active": false,
+      "maxEpisodesPerRun": 1,
+      "speakersExpected": 2
+    },
+    {
+      "slug": "consultancy-growth-herd",
+      "name": "The Consultancy Growth Podcast",
+      "searchTerm": "Consultancy Growth Podcast Craig Herd",
+      "feedUrl": null,
+      "hosts": ["Craig Herd"],
+      "region": "UK",
+      "lenses": ["consulting"],
+      "active": false,
+      "maxEpisodesPerRun": 1,
+      "speakersExpected": 2
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "radar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Podcast transcript pipeline: roster -> feeds -> audio -> diarised transcript -> named speakers -> Markdown/JSON export.",
+  "type": "module",
+  "bin": {
+    "radar": "./dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "radar": "tsx src/bin.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.122.0",
+    "@prisma/adapter-better-sqlite3": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "assemblyai": "4.37.0",
+    "better-sqlite3": "13.0.3",
+    "commander": "15.0.0",
+    "dotenv": "17.4.2",
+    "rss-parser": "3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "prisma": "7.10.0",
+    "tsx": "4.23.12",
+    "typescript": "5.9.3",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

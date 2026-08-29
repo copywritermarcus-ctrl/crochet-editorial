@@ -1,0 +1,327 @@
+{
+  "id": "fixture-transcript-0000-0000-000000000001",
+  "status": "completed",
+  "audio_url": "https://cdn.assemblyai.com/upload/fixture-productization-again",
+  "audio_duration": 1500,
+  "language_code": "en_us",
+  "speech_model": "best",
+  "speaker_labels": true,
+  "speakers_expected": 2,
+  "error": null,
+  "text": "Welcome back to 2Bobs. I'm Blair Enns, and as always I'm joined by David C. Baker. Today we are returning to productization, which is a subject we have circled more than once. We have, and I think we keep coming back to it because most firms get the sequencing wrong. They productize before they have any real evidence that the market wants the thing they are packaging. So the failure is not packaging as such. The failure is packaging too early. Right. Productization is a compression of something you already do well and repeatedly. If you have not done it repeatedly, there is nothing to compress. Let us talk about pricing, because that is where I see the most damage. The moment you put a fixed price on a productized offering, you have capped your upside. Unless the cost of delivery falls faster than the price does. Which is the whole argument for productizing in the first place. It is. And it is why I would rather see a firm productize the diagnostic than the delivery.",
+  "utterances": [
+    {
+      "confidence": 0.97,
+      "start": 0,
+      "end": 7200,
+      "speaker": "A",
+      "text": "Welcome back to 2Bobs. I'm Blair Enns, and as always I'm joined by David C. Baker.",
+      "words": [
+        {
+          "text": "Welcome",
+          "start": 0,
+          "end": 450,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "back",
+          "start": 450,
+          "end": 900,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "to",
+          "start": 900,
+          "end": 1350,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "2Bobs.",
+          "start": 1350,
+          "end": 1800,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "I'm",
+          "start": 1800,
+          "end": 2250,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "Blair",
+          "start": 2250,
+          "end": 2700,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "Enns,",
+          "start": 2700,
+          "end": 3150,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "and",
+          "start": 3150,
+          "end": 3600,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "as",
+          "start": 3600,
+          "end": 4050,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "always",
+          "start": 4050,
+          "end": 4500,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "I'm",
+          "start": 4500,
+          "end": 4950,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "joined",
+          "start": 4950,
+          "end": 5400,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "by",
+          "start": 5400,
+          "end": 5850,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "David",
+          "start": 5850,
+          "end": 6300,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "C.",
+          "start": 6300,
+          "end": 6750,
+          "confidence": 0.97,
+          "speaker": "A"
+        },
+        {
+          "text": "Baker.",
+          "start": 6750,
+          "end": 7200,
+          "confidence": 0.97,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "confidence": 0.96,
+      "start": 7200,
+      "end": 14100,
+      "speaker": "A",
+      "text": "Today we are returning to productization, which is a subject we have circled more than once.",
+      "words": [
+        {
+          "text": "Today",
+          "start": 7200,
+          "end": 7631,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "we",
+          "start": 7631,
+          "end": 8062,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "are",
+          "start": 8062,
+          "end": 8493,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "returning",
+          "start": 8493,
+          "end": 8925,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "to",
+          "start": 8925,
+          "end": 9356,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "productization,",
+          "start": 9356,
+          "end": 9787,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "which",
+          "start": 9787,
+          "end": 10218,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "is",
+          "start": 10218,
+          "end": 10650,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "a",
+          "start": 10650,
+          "end": 11081,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "subject",
+          "start": 11081,
+          "end": 11512,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "we",
+          "start": 11512,
+          "end": 11943,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "have",
+          "start": 11943,
+          "end": 12375,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "circled",
+          "start": 12375,
+          "end": 12806,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "more",
+          "start": 12806,
+          "end": 13237,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "than",
+          "start": 13237,
+          "end": 13668,
+          "confidence": 0.96,
+          "speaker": "A"
+        },
+        {
+          "text": "once.",
+          "start": 13668,
+          "end": 14100,
+          "confidence": 0.96,
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "confidence": 0.95,
+      "start": 14400,
+      "end": 22800,
+      "speaker": "B",
+      "text": "We have, and I think we keep coming back to it because most firms get the sequencing wrong."
+    },
+    {
+      "confidence": 0.94,
+      "start": 23000,
+      "end": 31500,
+      "speaker": "B",
+      "text": "They productize before they have any real evidence that the market wants the thing they are packaging."
+    },
+    {
+      "confidence": 0.96,
+      "start": 31800,
+      "end": 39000,
+      "speaker": "A",
+      "text": "So the failure is not packaging as such. The failure is packaging too early."
+    },
+    {
+      "confidence": 0.97,
+      "start": 39400,
+      "end": 48200,
+      "speaker": "B",
+      "text": "Right. Productization is a compression of something you already do well and repeatedly."
+    },
+    {
+      "confidence": 0.95,
+      "start": 48500,
+      "end": 57000,
+      "speaker": "B",
+      "text": "If you have not done it repeatedly, there is nothing to compress."
+    },
+    {
+      "confidence": 0.96,
+      "start": 57400,
+      "end": 66300,
+      "speaker": "A",
+      "text": "Let us talk about pricing, because that is where I see the most damage."
+    },
+    {
+      "confidence": 0.93,
+      "start": 66600,
+      "end": 75200,
+      "speaker": "A",
+      "text": "The moment you put a fixed price on a productized offering, you have capped your upside."
+    },
+    {
+      "confidence": 0.94,
+      "start": 75600,
+      "end": 84900,
+      "speaker": "B",
+      "text": "Unless the cost of delivery falls faster than the price does."
+    },
+    {
+      "confidence": 0.96,
+      "start": 85200,
+      "end": 93400,
+      "speaker": "A",
+      "text": "Which is the whole argument for productizing in the first place."
+    },
+    {
+      "confidence": 0.95,
+      "start": 93700,
+      "end": 102000,
+      "speaker": "B",
+      "text": "It is. And it is why I would rather see a firm productize the diagnostic than the delivery."
+    }
+  ],
+  "confidence": 0.9533
+}

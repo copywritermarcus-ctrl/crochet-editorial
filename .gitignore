@@ -1,0 +1,16 @@
+# Node
+node_modules/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Radar working data (DB, audio, raw vendor responses, exports, logs)
+radar/data/
+
+# Build output
+radar/dist/
+
+# OS
+.DS_Store
