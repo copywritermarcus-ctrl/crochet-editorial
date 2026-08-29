@@ -277,3 +277,69 @@ describe('nameSpeakers', () => {
     expect(await env.prisma.speakerMap.count({ where: { episodeId: id } })).toBe(0);
   });
 });
+
+describe('nameSpeakers with a feed-provided transcript', () => {
+  /**
+   * A provided transcript labels its segments with real names, not the
+   * anonymous A/B/C a speech model emits. Those need no resolving, so naming
+   * must map them to themselves without spending an API call.
+   */
+  async function seedImported(): Promise<string> {
+    const id = await seedEpisode(env.prisma, {
+      slug: 'rare-mind',
+      guid: 'rare-mind-ep-041',
+      status: 'transcribed',
+      source: 'provided',
+      estCostUsd: 0,
+    });
+    await seedUtterances(env.prisma, id, [
+      { speaker: 'Alex M H Smith', start: 0, end: 6400, text: 'My guest today is April Dunford.', confidence: null },
+      { speaker: 'April Dunford', start: 13600, end: 22100, text: 'Positioning is context, not copy.', confidence: null },
+      { speaker: 'Alex M H Smith', start: 32200, end: 40000, text: 'So the frame comes first.', confidence: null },
+    ]);
+    return id;
+  }
+
+  it('maps provided speaker names to themselves without calling the model', async () => {
+    const id = await seedImported();
+    const namer = fakeNamer([]);
+
+    const result = await nameSpeakers(env.ctx, { namer }, { allPending: true });
+
+    expect(result.named).toBe(1);
+    expect(namer.prompts).toHaveLength(0);
+
+    const rows = await env.prisma.speakerMap.findMany({ where: { episodeId: id }, orderBy: { label: 'asc' } });
+    expect(rows.map((r) => [r.label, r.name, r.role])).toEqual([
+      ['Alex M H Smith', 'Alex M H Smith', 'host'],
+      ['April Dunford', 'April Dunford', 'guest'],
+    ]);
+    expect(rows.every((r) => r.needsReview === false)).toBe(true);
+    expect((await env.prisma.episode.findUniqueOrThrow({ where: { id } })).status).toBe('named');
+  });
+
+  it('still calls the model when a provided transcript used anonymous labels', async () => {
+    const id = await seedEpisode(env.prisma, {
+      slug: '2bobs', status: 'transcribed', source: 'provided', estCostUsd: 0,
+    });
+    await seedUtterances(env.prisma, id, assemblyAiFixtureAsVendorTranscript().utterances);
+    const namer = fakeNamer([JSON.stringify(expectedMap())]);
+
+    await nameSpeakers(env.ctx, { namer }, { allPending: true });
+
+    expect(namer.prompts).toHaveLength(1);
+  });
+
+  it('never overwrites a manual row on the self-map path', async () => {
+    const id = await seedImported();
+    await seedSpeakerMap(env.prisma, id, [
+      { label: 'April Dunford', name: 'April Dunford (corrected)', role: 'guest', confidence: 'high', manual: true },
+    ]);
+    const namer = fakeNamer([]);
+
+    await nameSpeakers(env.ctx, { namer }, { episodeId: id });
+
+    const row = await env.prisma.speakerMap.findFirstOrThrow({ where: { episodeId: id, label: 'April Dunford' } });
+    expect(row.name).toBe('April Dunford (corrected)');
+  });
+});

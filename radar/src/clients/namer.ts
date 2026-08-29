@@ -1,4 +1,4 @@
-import { notImplemented } from '../lib/notImplemented.js';
+import Anthropic from '@anthropic-ai/sdk';
 
 /**
  * Deliberately dumb: takes a fully-built prompt, returns the model's raw text.
@@ -9,6 +9,23 @@ export interface Namer {
   complete(prompt: string): Promise<string>;
 }
 
-export function createAnthropicNamer(_opts: { apiKey: string; model: string }): Namer {
-  return notImplemented('createAnthropicNamer');
+export function createAnthropicNamer(opts: { apiKey: string; model: string }): Namer {
+  const client = new Anthropic({ apiKey: opts.apiKey });
+
+  return {
+    async complete(prompt: string): Promise<string> {
+      const response = await client.messages.create({
+        model: opts.model,
+        // The reply is a short JSON object; a few hundred tokens is ample.
+        max_tokens: 1024,
+        messages: [{ role: 'user', content: prompt }],
+      });
+
+      return response.content
+        .filter((block): block is Anthropic.TextBlock => block.type === 'text')
+        .map((block) => block.text)
+        .join('')
+        .trim();
+    },
+  };
 }

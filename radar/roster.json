@@ -5,9 +5,14 @@
       "name": "2Bobs",
       "searchTerm": "2Bobs Enns Baker",
       "feedUrl": null,
-      "hosts": ["David C. Baker", "Blair Enns"],
+      "hosts": [
+        "David C. Baker",
+        "Blair Enns"
+      ],
       "region": "US",
-      "lenses": ["business-of-expertise"],
+      "lenses": [
+        "business-of-expertise"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
       "speakersExpected": 2
@@ -17,9 +22,14 @@
       "name": "Ditching Hourly",
       "searchTerm": "Ditching Hourly Jonathan Stark",
       "feedUrl": null,
-      "hosts": ["Jonathan Stark"],
+      "hosts": [
+        "Jonathan Stark"
+      ],
       "region": "US",
-      "lenses": ["pricing", "business-of-expertise"],
+      "lenses": [
+        "pricing",
+        "business-of-expertise"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
       "speakersExpected": 1
@@ -29,81 +39,121 @@
       "name": "Undisputed Authority",
       "searchTerm": "Undisputed Authority Liam Curley",
       "feedUrl": null,
-      "hosts": ["Liam Curley"],
+      "hosts": [
+        "Liam Curley"
+      ],
       "region": "UK",
-      "lenses": ["authority", "positioning"],
+      "lenses": [
+        "authority",
+        "positioning"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
     {
       "slug": "leveraging-tl",
       "name": "Leveraging Thought Leadership",
       "searchTerm": "Leveraging Thought Leadership Winick",
       "feedUrl": null,
-      "hosts": ["Peter Winick", "Bill Sherman"],
+      "hosts": [
+        "Peter Winick",
+        "Bill Sherman"
+      ],
       "region": "US",
-      "lenses": ["thought-leadership"],
+      "lenses": [
+        "thought-leadership"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
     {
       "slug": "everything-tl",
       "name": "Everything Thought Leadership",
       "searchTerm": "Everything Thought Leadership Buday",
       "feedUrl": null,
-      "hosts": ["Bob Buday"],
+      "hosts": [
+        "Bob Buday"
+      ],
       "region": "US",
-      "lenses": ["thought-leadership"],
+      "lenses": [
+        "thought-leadership"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
     {
       "slug": "unseen-unknown",
       "name": "Unseen Unknown",
       "searchTerm": "Unseen Unknown Jasmine Bina",
       "feedUrl": null,
-      "hosts": ["Jasmine Bina", "Jean-Louis Rawlence"],
+      "hosts": [
+        "Jasmine Bina",
+        "Jean-Louis Rawlence"
+      ],
       "region": "US",
-      "lenses": ["brand", "culture"],
+      "lenses": [
+        "brand",
+        "culture"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
     {
       "slug": "b2b-marketing",
       "name": "B2B Marketing Podcast",
       "searchTerm": "B2B Marketing Podcast Richard O'Connor",
       "feedUrl": null,
-      "hosts": ["Richard O'Connor"],
+      "hosts": [
+        "Richard O'Connor"
+      ],
       "region": "UK",
-      "lenses": ["b2b-marketing"],
+      "lenses": [
+        "b2b-marketing"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 3
+      "speakersExpected": 3,
+      "formatGuess": true
     },
     {
       "slug": "uncensored-cmo",
       "name": "Uncensored CMO",
       "searchTerm": "Uncensored CMO Jon Evans",
       "feedUrl": null,
-      "hosts": ["Jon Evans"],
+      "hosts": [
+        "Jon Evans"
+      ],
       "region": "UK",
-      "lenses": ["b2b-marketing", "brand"],
+      "lenses": [
+        "b2b-marketing",
+        "brand"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 3
+      "speakersExpected": 3,
+      "formatGuess": true
     },
     {
       "slug": "rare-mind",
       "name": "The Rare Mind",
       "searchTerm": "The Rare Mind Alex M H Smith",
       "feedUrl": null,
-      "hosts": ["Alex M H Smith"],
+      "hosts": [
+        "Alex M H Smith"
+      ],
       "region": "UK",
-      "lenses": ["strategy", "positioning"],
+      "lenses": [
+        "strategy",
+        "positioning"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
       "speakersExpected": 2
@@ -113,14 +163,19 @@
       "name": "The Consulting Growth Podcast",
       "searchTerm": "Consulting Growth Podcast Joe O'Mahoney",
       "feedUrl": null,
-      "hosts": ["Joe O'Mahoney"],
+      "hosts": [
+        "Joe O'Mahoney"
+      ],
       "region": "UK",
-      "lenses": ["consulting", "business-of-expertise"],
+      "lenses": [
+        "consulting",
+        "business-of-expertise"
+      ],
       "active": true,
       "maxEpisodesPerRun": 2,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
-
     {
       "slug": "marketing-week",
       "name": "The Marketing Week Podcast",
@@ -128,22 +183,30 @@
       "feedUrl": null,
       "hosts": [],
       "region": "UK",
-      "lenses": ["b2b-marketing"],
+      "lenses": [
+        "b2b-marketing"
+      ],
       "active": false,
       "maxEpisodesPerRun": 1,
-      "speakersExpected": 3
+      "speakersExpected": 3,
+      "formatGuess": true
     },
     {
       "slug": "marketing-meetup",
       "name": "The Marketing Meetup Podcast",
       "searchTerm": "The Marketing Meetup Podcast Joe Glover",
       "feedUrl": null,
-      "hosts": ["Joe Glover"],
+      "hosts": [
+        "Joe Glover"
+      ],
       "region": "UK",
-      "lenses": ["b2b-marketing"],
+      "lenses": [
+        "b2b-marketing"
+      ],
       "active": false,
       "maxEpisodesPerRun": 1,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
     {
       "slug": "school-of-thought",
@@ -152,22 +215,30 @@
       "feedUrl": null,
       "hosts": [],
       "region": "UK",
-      "lenses": ["thought-leadership"],
+      "lenses": [
+        "thought-leadership"
+      ],
       "active": false,
       "maxEpisodesPerRun": 1,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     },
     {
       "slug": "consultancy-growth-herd",
       "name": "The Consultancy Growth Podcast",
       "searchTerm": "Consultancy Growth Podcast Craig Herd",
       "feedUrl": null,
-      "hosts": ["Craig Herd"],
+      "hosts": [
+        "Craig Herd"
+      ],
       "region": "UK",
-      "lenses": ["consulting"],
+      "lenses": [
+        "consulting"
+      ],
       "active": false,
       "maxEpisodesPerRun": 1,
-      "speakersExpected": 2
+      "speakersExpected": 2,
+      "formatGuess": true
     }
   ]
 }
