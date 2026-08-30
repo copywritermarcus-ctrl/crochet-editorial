@@ -1,5 +1,4 @@
 import type { EpisodeStatus, RadarContext } from '../types.js';
-import { notImplemented } from '../lib/notImplemented.js';
 
 export interface RetryOptions {
   episodeId?: string;
@@ -16,6 +15,30 @@ export interface RetryResult {
  * `transcribed`; an audioPath means `fetched`; otherwise `discovered`.
  * Clears errorMessage so the next run picks the episode up.
  */
-export function retry(_ctx: RadarContext, _opts?: RetryOptions): Promise<RetryResult> {
-  return notImplemented('retry');
+export async function retry(ctx: RadarContext, opts: RetryOptions = {}): Promise<RetryResult> {
+  const episodes = await ctx.prisma.episode.findMany({
+    where: opts.episodeId ? { id: opts.episodeId } : { status: 'failed' },
+    orderBy: { publishedAt: 'desc' },
+    include: { _count: { select: { utterances: true } } },
+  });
+
+  const result: RetryResult = { reset: [] };
+
+  for (const episode of episodes) {
+    if (episode.status !== 'failed') continue;
+
+    const to: EpisodeStatus =
+      episode._count.utterances > 0 ? 'transcribed' : episode.audioPath ? 'fetched' : 'discovered';
+
+    result.reset.push({ episodeId: episode.id, from: 'failed', to });
+    if (opts.dryRun) continue;
+
+    await ctx.prisma.episode.update({
+      where: { id: episode.id },
+      data: { status: to, errorMessage: null },
+    });
+    ctx.logger.info('retry.reset', { episodeId: episode.id, to });
+  }
+
+  return result;
 }

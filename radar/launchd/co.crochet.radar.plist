@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>co.crochet.radar</string>
+
+  <!-- EDIT THESE TWO PATHS if the repo is not at /Users/marcus/crochet-editorial.
+       launchd does not expand ~ and does not read your shell profile. -->
+  <key>WorkingDirectory</key>
+  <string>/Users/marcus/crochet-editorial/radar</string>
+
+  <!-- The wrapper exists only so the run log gets the date in its filename:
+       launchd does not expand dates in StandardOutPath. All it runs is
+       "node dist/bin.js run", with a since window of 8 days and a cap of
+       600 minutes. Change those in launchd/run.sh, not here. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/marcus/crochet-editorial/radar/launchd/run.sh</string>
+  </array>
+
+  <!-- Sunday 22:00. Weekday 0 is Sunday. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key><integer>0</integer>
+    <key>Hour</key><integer>22</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <!-- Radar reads radar/.env itself, so no secrets live in this file.
+       PATH is set only so node can find anything it shells out to. -->
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+  </dict>
+
+  <!-- The dated per-run log is data/logs/radar-YYYY-MM-DD.log, written by the
+       wrapper. These two catch anything that fails before the wrapper's own
+       redirect takes effect — a bad node path, a missing dist/. -->
+  <key>StandardOutPath</key>
+  <string>/Users/marcus/crochet-editorial/radar/data/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/marcus/crochet-editorial/radar/data/logs/launchd.err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>

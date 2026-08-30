@@ -3,10 +3,10 @@ import { expect } from 'vitest';
 /**
  * Asserts a call throws for the *right* reason.
  *
- * A bare `.toThrow()` is satisfied by the Phase 1 NotImplementedError, which
- * means such a test would sit green whether or not the engine was ever built.
- * This rejects that specific error explicitly, so every negative-path test
- * stays red until real validation exists behind it.
+ * A bare `.toThrow()` was satisfied by the Phase 1 NotImplementedError scaffold,
+ * so such a test sat green whether or not the engine was ever built. The guard
+ * against that error name is kept deliberately: it costs nothing, and it stops
+ * a future stub from quietly re-greening these tests.
  */
 export function expectThrows(fn: () => unknown, pattern: RegExp): void {
   let thrown: unknown;

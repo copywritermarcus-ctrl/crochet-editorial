@@ -31,7 +31,11 @@ describe('poll', () => {
   });
 
   it('widens with a larger window', async () => {
+    // Raise the cap so this measures the window alone; the cap has its own test.
+    await env.prisma.show.update({ where: { slug: '2bobs' }, data: { maxEpisodesPerRun: 10 } });
+
     const result = await poll(env.ctx, { feedClient: fakeFeedClient(FEEDS) }, { sinceDays: 60, showSlug: '2bobs' });
+
     expect(result.discovered).toBe(4);
   });
 
