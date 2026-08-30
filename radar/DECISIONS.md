@@ -182,3 +182,42 @@ Carried forward. Breaking one of these is a decision, not a detail.
   injectable client. If a change needs the network to test, the change is wrong.
 - **Fixtures under `fixtures/` are frozen.** Change a fixture and the engine
   together, in one commit, with a note in `fixtures/README.md` saying why.
+
+---
+
+## Phase 4 — Scheduling (decided 2026-08-30)
+
+Taken at the PR gate, before Phase 3 ran.
+
+1. **Radar is scheduled by launchd on the Mac Mini.** The machine already holds
+   the keys, the audio and the database; the job is a weekly local batch, not a
+   service. `launchd/co.crochet.radar.plist`, Sunday 22:00.
+2. **The sleep and auto-login dependency is resolved** as of 30 August 2026. It
+   was a genuine blocker, not a footnote: a `gui/` domain job needs the user
+   session to exist, and launchd runs a missed calendar job on **wake** but not
+   after a shutdown or with nobody logged in.
+3. **GitHub Actions considered and declined.** Two reasons, either sufficient:
+   *key custody* — it would put the AssemblyAI and Anthropic keys in a
+   third-party secret store for no gain, when the only consumer is one Mac in
+   the office; and *audio handling* — a hosted runner has no persistent disk, so
+   `data/audio/`, `data/raw/` and the SQLite database would all need redesigning
+   around object storage to survive between runs. That is a rewrite of the
+   storage layer to solve a problem we do not have.
+
+### Merge protocol for the Phase 0–2 pull request
+
+**Do not merge on build gates alone.** Green tests prove the engine does what
+the fixtures say; they prove nothing about real feeds, real audio or real spend.
+
+Phase 3 runs attended on this same branch, per `PHASE3-RUNBOOK.md`. Its evidence
+commits to the branch alongside the build:
+
+- corrected `formatGuess` values in `roster.json`, from what the smoke actually
+  showed about each show's format;
+- the regenerated `fixtures/export/expected.md`, with its diff reviewed by eye
+  before acceptance;
+- the ticked live-docs verification table for the AssemblyAI parameter names
+  (Phase 2 pin 2), which the build container's egress proxy blocked.
+
+Merge only when the pull request carries **build gates and smoke results
+together**.
